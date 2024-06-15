@@ -1,8 +1,8 @@
 <template>
   <div class="componentContainer">
     <div class="priceContainer">
-      <p class="normalPrice">Normal: ${{ normalPrice }} p/u</p>
-      <h2 class="memberPrice">Socio: ${{ socioPrice }} p/u</h2>
+      <p class="normalPrice ruda">Normal: ${{ normalPrice }} p/u</p>
+      <h2 class="memberPrice ruda">Socio: ${{ socioPrice }} p/u</h2>
     </div>
     <div class="quantity">
       <button class="signButtom" @click="testFuntion">{{ addtoCard }}</button>
@@ -18,7 +18,6 @@ export default {
   props: { normalPrice: Number, socioPrice: Number, id: Number, csat: Number },
   data() {
     return {
-      quantityNum: 0,
       toCard: true,
       CsatImg5
     }
@@ -27,9 +26,6 @@ export default {
     testFuntion() {
       this.$emit('testEmit', this.id)
       this.toCard = !this.toCard
-    },
-    setUrlCsat() {
-      return '../icons/img/CustomerSat/csat_' + this.csat + '.png'
     }
   },
   computed: {
@@ -50,7 +46,9 @@ export default {
 }
 </script>
 
-<style>
+<style scope>
+@import url('https://fonts.googleapis.com/css2?family=Ruda&display=swap');
+
 .componentContainer {
   width: 80%;
   display: flex;
@@ -76,6 +74,12 @@ export default {
   width: 30%;
   border-radius: 15px;
 }
+.ruda {
+  font-family: 'Ruda', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .quantity {
   display: flex;
@@ -91,7 +95,7 @@ export default {
   padding: 10px;
   border: none;
   border-radius: 1vh;
-  background-color: #d7ecff;
+  background-color: #fba974;
   cursor: pointer;
   font-family: 'Sarpanch', sans-serif;
   font-weight: 300;
@@ -99,7 +103,7 @@ export default {
 }
 
 .quantity > button:hover {
-  background-color: #97ceff;
+  background-color: #e99a65;
 }
 
 .priceContainer {

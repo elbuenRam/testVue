@@ -1,24 +1,27 @@
 <template>
   <div class="headerContainer">
-    <h1 class="russo logoHeader">WAD</h1>
-    <div class="menuContainer">
-      <p class="russo menuInicio">Inicio</p>
-      <router-link to="/product"><p class="russo menuCatalog">Catálogo</p></router-link>
-      <p class="russo menuMembr">Membresias</p>
+    <router-link to="/"><h1 class="russo">W<span>A</span>D</h1></router-link>
+    <router-link to="/"><h3 class="ruda">Inicio</h3></router-link>
+    <router-link to="/"> <h3 class="ruda">Membresias</h3></router-link>
+    <div class="loginbutton" v-if="isLogging">
+      <router-link to="/"> <h3 class="ruda">User</h3></router-link>
     </div>
-    <p class="russo usericon">U</p>
+    <div class="loginbutton" v-if="!isLogging">
+      <router-link to="/"><h3 class="ruda">Iniciar Session</h3></router-link>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: { normalPrice: String, socioPrice: String, id: Number },
   data() {
-    return {}
+    return {
+      isLogging: true
+    }
   },
-  methods: {
-    testfun() {
-      console.log('SVG pressed')
+  computed: {
+    checkLogging() {
+      return this.isLogging
     }
   }
 }
@@ -27,10 +30,25 @@ export default {
 <style scope>
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Sarpanch:wght@400;500;600;700;800;900&display=swap');
 
-div.headerContainer {
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.headerContainer {
+  padding: 2% 0;
   display: flex;
-  justify-content: space-between;
-  border-bottom: solid 0.1px;
+  text-align: center;
+  border-style: none none solid none;
+  border-width: 0.5px;
+}
+
+.headerContainer {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+span {
+  color: #fba974;
 }
 .russo {
   font-family: 'Russo One', sans-serif;
@@ -38,30 +56,16 @@ div.headerContainer {
   font-style: normal;
   color: black;
 }
-.headerIcon {
-  font-size: 36px;
+.ruda {
+  color: black;
+  font-family: 'Ruda', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
-.svgContainer {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.menuContainer {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  align-items: center;
-}
-
-.headerIcon {
-  cursor: pointer;
-}
-a {
-  text-decoration: none;
-}
-
-.usericon {
-  margin-right: 5%;
+.loginbutton {
+  background-color: #fba974;
+  padding: 0 1%;
+  border-radius: 3vh;
 }
 </style>

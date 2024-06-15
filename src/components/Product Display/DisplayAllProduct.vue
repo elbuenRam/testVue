@@ -1,6 +1,8 @@
 <template>
-  <h1 class="">Catálogo:</h1>
-  <Product-card v-for="beer in beers" :beer="beer" :key="beer.id"></Product-card>
+  <div>
+    <h1>Catálogo:</h1>
+    <Product-card v-for="beer in beers" :beer="beer" :key="beer.id"></Product-card>
+  </div>
 </template>
 
 <script>

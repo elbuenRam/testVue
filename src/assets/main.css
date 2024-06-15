@@ -1,13 +1,13 @@
 @import './base.css';
 
 @media (min-width: 1024px) {
-  body {
+  body {}
+
+  #app {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  #app {
-    width: 70%;
+    flex-direction: column;
+    width: 100%;
   }
 }

@@ -4,7 +4,7 @@ import { createApp } from 'vue'
 import DisplayAllProduct from './components/Product Display/DisplayAllProduct.vue'
 import App from './App.vue'
 
-const routes = [{ path: '/product', component: DisplayAllProduct }]
+const routes = [{ path: '/', component: DisplayAllProduct }]
 
 const router = createRouter({
   history: createWebHistory(),

@@ -4,14 +4,14 @@
       <img src="../icons/img/beer-demo.png" alt="" />
     </div>
     <div class="beerinfo">
-      <h1 class="indielower-regular">{{ beer.name_beer }}</h1>
+      <h1 class="ruda">{{ beer.name_beer }}</h1>
       <div class="beerinfogrid">
-        <p class="russo">ORIGEN:</p>
-        <p class="russo">{{ beer.origen }}</p>
-        <p class="russo">CONTENIDO:</p>
-        <p class="russo">{{ beer.contenido }}</p>
-        <p class="russo">% ALCOHOL</p>
-        <p class="russo">{{ beer.p_alcohol }}</p>
+        <p class="ruda">ORIGEN:</p>
+        <p class="ruda">{{ beer.origen }}</p>
+        <p class="ruda">CONTENIDO:</p>
+        <p class="ruda">{{ beer.contenido }}</p>
+        <p class="ruda">% ALCOHOL</p>
+        <p class="ruda">{{ beer.p_alcohol }}</p>
       </div>
     </div>
     <div className="priceratediv">
@@ -23,10 +23,10 @@
         :csat="beer.stars"
       ></price-rate-part>
       <div v-if="beer.desc_details.descuento" class="promotionBanner">
-        <h1>- {{ beer.desc_details.percentaje }}</h1>
+        <h1 class="ruda" style="color: white">- {{ beer.desc_details.percentaje }}</h1>
       </div>
       <div v-if="temporada" class="SeassonBanner">
-        <h1>Temp</h1>
+        <h1 class="ruda" style="color: white">Temp</h1>
       </div>
     </div>
   </div>
@@ -51,11 +51,10 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Sarpanch:wght@400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Indie+Flower&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ruda&display=swap');
 
 div.productcontainer {
-  background-color: #eef7ff;
+  background-color: #eaeaea;
   margin-top: 2.5%;
   margin-left: auto;
   margin-right: auto;
@@ -75,20 +74,11 @@ div.productcontainer:hover {
   transform: translatex(10px);
 }
 
-h1.indielower-regular {
-  margin-bottom: 0;
-  font-family: 'Indie Flower', cursive;
+.ruda {
+  font-family: 'Ruda', sans-serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-}
-
-.russo {
-  margin-top: 1%;
-  margin-bottom: 1%;
-  font-family: 'Russo One', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #4f4f4f;
 }
 
 img {
@@ -106,7 +96,6 @@ div.beerinfo {
 }
 
 div.beerinfogrid {
-  margin-top: 5%;
   margin-bottom: 10%;
   display: grid;
   grid-template-columns: 1fr 1fr;
