@@ -1,0 +1,13 @@
+@import './base.css';
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #app {
+    width: 70%;
+  }
+}
