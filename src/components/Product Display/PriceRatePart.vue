@@ -60,7 +60,6 @@ export default {
 }
 .imgCSat {
   aspect-ratio: 1/1;
-
   width: 15%;
   height: 15%;
   margin: 0;
