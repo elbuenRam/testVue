@@ -36,18 +36,21 @@
   </div>
   <div class="containerMembresias">
     <h1 class="russo">¿Cómo funcionan las membresías?</h1>
-    <p>
+    <p class="ruda textInicio">
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem atque dicta pariatur vel est
       repellendus quae minus delectus laudantium voluptas quo illum, soluta recusandae, ipsam
       perferendis natus, necessitatibus itaque deleniti.
     </p>
+    <Membresias-component></Membresias-component>
   </div>
 </template>
 
 <script>
 import ComoFun from './ComoFun.vue'
+import MembresiasComponent from './MembresiasComponent.vue'
+
 export default {
-  components: { ComoFun }
+  components: { ComoFun, MembresiasComponent }
 }
 </script>
 
@@ -55,6 +58,12 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Sarpanch:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ruda&display=swap');
 
+.textInicio {
+  text-align: justify;
+  width: 75%;
+  margin: auto;
+  font-size: 150%;
+}
 .containerQS {
   margin: 5% 0;
   display: grid;

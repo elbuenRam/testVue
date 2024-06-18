@@ -86,7 +86,7 @@ p.comoFun {
   flex-direction: column;
   align-items: center;
   border-radius: 15px;
-  box-shadow: 0px 5px 15px #1e1e1e;
+  box-shadow: 0px 5px 5px #1e1e1e;
   margin: 0 1%;
   width: 100%;
 }

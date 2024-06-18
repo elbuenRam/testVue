@@ -1,7 +1,12 @@
 <template>
   <div class="headerContainer">
     <router-link to="/"><h1 class="russo">W<span>A</span>D</h1></router-link>
-    <router-link to="/"><h3 class="ruda">Inicio</h3></router-link>
+    <router-link @click="logicInicio" v-if="this.$route.path === '/catalogo'" to="/inicio"
+      ><h3 class="ruda">Inicio</h3>
+    </router-link>
+    <router-link @click="logicInicio" v-if="this.$route.path === '/inicio'" to="/catalogo"
+      ><h3 class="ruda">Catalogo</h3>
+    </router-link>
     <router-link to="/"> <h3 class="ruda">Membresias</h3></router-link>
     <div class="loginbutton" v-if="isLogging">
       <router-link to="/"> <h3 class="ruda">User</h3></router-link>
@@ -16,12 +21,19 @@
 export default {
   data() {
     return {
-      isLogging: true
+      isLogging: true,
+      onInicio: false
     }
   },
   computed: {
     checkLogging() {
       return this.isLogging
+    }
+  },
+  methods: {
+    logicInicio() {
+      this.onInicio = !this.onInicio
+      console.log(this.$route.path)
     }
   }
 }

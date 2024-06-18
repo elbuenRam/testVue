@@ -71,7 +71,7 @@ div.productcontainer {
 }
 
 div.productcontainer:hover {
-  transform: translatex(10px);
+  transform: scale(103%);
 }
 
 .ruda {
