@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Catálogo:</h1>
+    <h1 id="catalogoText">Catálogo:</h1>
     <Product-card v-for="beer in beers" :beer="beer" :key="beer.id"></Product-card>
   </div>
 </template>
@@ -20,3 +20,11 @@ export default {
   }
 }
 </script>
+
+<style>
+@media (max-width: 550px) {
+  #catalogoText {
+    font-size: 125%;
+  }
+}
+</style>

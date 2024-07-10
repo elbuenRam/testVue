@@ -41,7 +41,9 @@
       repellendus quae minus delectus laudantium voluptas quo illum, soluta recusandae, ipsam
       perferendis natus, necessitatibus itaque deleniti.
     </p>
-    <Membresias-component></Membresias-component>
+    <div class="containerMembComponent">
+      <Membresias-component></Membresias-component>
+    </div>
   </div>
 </template>
 
@@ -75,6 +77,11 @@ export default {
 .containerWAD {
   margin: 5% 0;
   width: 80%;
+}
+
+.containerMembComponent {
+  display: flex;
+  justify-content: center;
 }
 .containerMembresias > h1 {
   font-size: 3rem;
@@ -157,5 +164,11 @@ span.companySpan {
   font-weight: 400;
   font-style: normal;
   color: black;
+}
+@media (max-width: 550px) {
+  h2.ruda {
+    font-size: 2rem;
+    margin-bottom: 0%;
+  }
 }
 </style>

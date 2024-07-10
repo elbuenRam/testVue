@@ -4,11 +4,13 @@ import { createApp } from 'vue'
 import DisplayAllProduct from './components/Product Display/DisplayAllProduct.vue'
 import App from './App.vue'
 import InicioComponent from './components/Inicio/InicioComponent.vue'
+import MembresiasComponent from './components/Inicio/MembresiasComponent.vue'
 
 const routes = [
-  { path: '/', component: InicioComponent, alias: '/inicio' },
+  { path: '/', component: InicioComponent, redirect: '/inicio' },
   { path: '/catalogo', component: DisplayAllProduct },
-  { path: '/inicio', component: InicioComponent }
+  { path: '/inicio', component: InicioComponent },
+  { path: '/membresias', component: MembresiasComponent }
 ]
 
 const router = createRouter({

@@ -37,5 +37,6 @@ export default {
   margin: 5% 0;
   display: flex;
   justify-content: space-evenly;
+  width: 80%;
 }
 </style>

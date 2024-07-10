@@ -4,7 +4,7 @@
       <img src="../icons/img/beer-demo.png" alt="" />
     </div>
     <div class="beerinfo">
-      <h1 class="ruda">{{ beer.name_beer }}</h1>
+      <h1 id="priceHeader" class="ruda">{{ beer.name_beer }}</h1>
       <div class="beerinfogrid">
         <p class="ruda">ORIGEN:</p>
         <p class="ruda">{{ beer.origen }}</p>
@@ -135,5 +135,67 @@ div.priceratediv > * {
   background-color: #0a6847;
   color: #eef7ff;
   font-size: 60%;
+}
+
+@media (max-width: 550px) {
+  div.productcontainer {
+    display: grid;
+    align-items: self-start;
+    grid-template-rows: 1fr 0.7fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 1%;
+  }
+  div.productcontainer:hover {
+    transform: scale(101%);
+  }
+  img {
+    margin-left: 30%;
+    margin-top: 20%;
+    margin-bottom: 0%;
+    width: 60%;
+    padding-top: 0%;
+    aspect-ratio: 1/4;
+  }
+  .promotionBanner {
+    top: 5%;
+    font-size: 45%;
+  }
+  .SeassonBanner {
+    top: 5%;
+    font-size: 45%;
+  }
+
+  div.beerinfo {
+    display: flex;
+    flex-direction: column;
+    font-size: 90%;
+    margin-right: 5%;
+    padding-right: 10%;
+  }
+
+  div.beerinfogrid {
+    margin-bottom: 0%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .imgcontainer {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+  }
+  .priceratediv {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin-left: 20%;
+  }
+  h1#priceHeader.ruda {
+    margin-top: 25%;
+  }
+  .priceratediv {
+    height: 150%;
+  }
 }
 </style>

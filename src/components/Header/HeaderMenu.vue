@@ -1,13 +1,16 @@
 <template>
   <div class="headerContainer">
     <router-link to="/"><h1 class="russo">W<span>A</span>D</h1></router-link>
-    <router-link @click="logicInicio" v-if="this.$route.path === '/catalogo'" to="/inicio"
+    <router-link
+      @click="logicInicio"
+      v-if="this.$route.path === '/catalogo' || this.$route.path === '/membresias'"
+      to="/inicio"
       ><h3 class="ruda">Inicio</h3>
     </router-link>
     <router-link @click="logicInicio" v-if="this.$route.path === '/inicio'" to="/catalogo"
       ><h3 class="ruda">Catalogo</h3>
     </router-link>
-    <router-link to="/"> <h3 class="ruda">Membresias</h3></router-link>
+    <router-link to="/membresias"> <h3 class="ruda">Membresias</h3></router-link>
     <div class="loginbutton" v-if="isLogging">
       <router-link to="/"> <h3 class="ruda">User</h3></router-link>
     </div>
@@ -79,5 +82,11 @@ span {
   background-color: #fba974;
   padding: 0 1%;
   border-radius: 3vh;
+}
+
+@media (max-width: 550px) {
+  a {
+    font-size: 75%;
+  }
 }
 </style>

@@ -17,4 +17,10 @@ export default {}
 .header {
   width: 70%;
 }
+
+@media (max-width: 550px) {
+  .header {
+    width: 90%;
+  }
+}
 </style>
