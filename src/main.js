@@ -5,12 +5,14 @@ import DisplayAllProduct from './components/Product Display/DisplayAllProduct.vu
 import App from './App.vue'
 import InicioComponent from './components/Inicio/InicioComponent.vue'
 import MembresiasComponent from './components/Inicio/MembresiasComponent.vue'
+import InicioSesionComp from './components/InicioSesion-Registro/InicioSesionComp.vue'
 
 const routes = [
   { path: '/', component: InicioComponent, redirect: '/inicio' },
   { path: '/catalogo', component: DisplayAllProduct },
   { path: '/inicio', component: InicioComponent },
-  { path: '/membresias', component: MembresiasComponent }
+  { path: '/membresias', component: MembresiasComponent },
+  { path: '/login', component: InicioSesionComp }
 ]
 
 const router = createRouter({

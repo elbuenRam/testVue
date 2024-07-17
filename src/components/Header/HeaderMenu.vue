@@ -12,7 +12,7 @@
     </router-link>
     <router-link to="/membresias"> <h3 class="ruda">Membresias</h3></router-link>
     <div class="loginbutton" v-if="isLogging">
-      <router-link to="/"> <h3 class="ruda">User</h3></router-link>
+      <router-link to="/login"> <h3 class="ruda">User</h3></router-link>
     </div>
     <div class="loginbutton" v-if="!isLogging">
       <router-link to="/"><h3 class="ruda">Iniciar Session</h3></router-link>

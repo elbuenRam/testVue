@@ -100,4 +100,21 @@ p.comoFun {
 svg {
   margin-top: 5%;
 }
+@media (max-width: 550px) {
+  .ComoFuncontainer {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+  .agregarCarrito,
+  .procedePago,
+  .EnCamino {
+    margin: 3% 1%;
+    text-align: center;
+    box-shadow: 0px 2px 0px #1e1e1e;
+  }
+  p.comoFun {
+    font-size: 130%;
+  }
+}
 </style>

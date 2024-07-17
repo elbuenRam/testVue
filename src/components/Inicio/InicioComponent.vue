@@ -12,7 +12,6 @@
   </div>
 
   <div class="containerQS">
-    <img class="sunsetImg" src="../icons/img/cervezaSunset.jpg" alt="" />
     <div class="quienesSomosText">
       <h2 class="ruda">¿Quienes somos?</h2>
       <p class="ruda pwr">
@@ -27,11 +26,10 @@
         refrigerador, abras una cerveza y digas “What A Day”.
       </p>
     </div>
-    <img class="sunsetImg" src="../icons/img/beerStand.jpg" alt="" />
   </div>
 
   <div class="containerWAD">
-    <h1 class="russo ache1">¿Cómo funciona "WAD"?</h1>
+    <h1 class="russo">¿Cómo funciona "WAD"?</h1>
     <Como-fun></Como-fun>
   </div>
   <div class="containerMembresias">
@@ -67,7 +65,7 @@ export default {
   font-size: 150%;
 }
 .containerQS {
-  margin: 5% 0;
+  margin: 0% 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-row-gap: 10%;
@@ -75,7 +73,7 @@ export default {
   justify-items: center;
 }
 .containerWAD {
-  margin: 5% 0;
+  margin: 0% 0;
   width: 80%;
 }
 
@@ -169,6 +167,49 @@ span.companySpan {
   h2.ruda {
     font-size: 2rem;
     margin-bottom: 0%;
+  }
+
+  .brandLogoName {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+  }
+  h1.companyName,
+  span.companySpan {
+    margin: 3% 0;
+    font-size: 3.5rem;
+  }
+  .containmentInicio {
+    margin: 10% 0;
+    width: 70%;
+  }
+  .logoImg {
+    margin: 10% 0%;
+    aspect-ratio: 1/1.5;
+    width: 80%;
+    height: 80%;
+    border-radius: 20px;
+  }
+  .containerQS {
+    margin: 5% 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-items: center;
+  }
+  .containerWAD > h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .containerMembresias > h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .textInicio {
+    text-align: justify;
+    width: 70%;
+    margin: auto;
+    font-size: 110%;
   }
 }
 </style>

@@ -33,6 +33,15 @@
   display: grid;
   grid-template-columns: 2.5fr 1fr;
 }
+@media (max-width: 550px) {
+  .containerBiglMemb {
+    box-shadow: 0px 2px 3px #1e1e1e;
+    width: 100%;
+  }
+  .containerBiglMemb:hover {
+    transform: scale(100%);
+  }
+}
 </style>
 
 <script>

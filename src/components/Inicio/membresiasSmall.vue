@@ -33,6 +33,17 @@ h2.membTitle,
 .beneficiosMembValue {
   text-align: center;
 }
+
+@media (max-width: 550px) {
+  .containerSmallMemb {
+    box-shadow: 0px 2px 3px #1e1e1e;
+    margin: 5% 0;
+    width: 100%;
+  }
+  .containerSmallMemb:hover {
+    transform: scale(100%);
+  }
+}
 </style>
 
 <script>

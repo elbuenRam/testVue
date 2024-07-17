@@ -39,4 +39,13 @@ export default {
   justify-content: space-evenly;
   width: 80%;
 }
+@media (max-width: 550px) {
+  .containerMemb {
+    margin: 5% 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 80%;
+  }
+}
 </style>

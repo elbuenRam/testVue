@@ -23,7 +23,7 @@
         :csat="beer.stars"
       ></price-rate-part>
       <div v-if="beer.desc_details.descuento" class="promotionBanner">
-        <h1 class="ruda" style="color: white">- {{ beer.desc_details.percentaje }}</h1>
+        <h1 class="ruda" style="color: white">- {{ '  ' + beer.desc_details.percentaje }}</h1>
       </div>
       <div v-if="temporada" class="SeassonBanner">
         <h1 class="ruda" style="color: white">Temp</h1>
@@ -54,7 +54,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Ruda&display=swap');
 
 div.productcontainer {
-  background-color: #eaeaea;
+  background-color: #eef7ff;
   margin-top: 2.5%;
   margin-left: auto;
   margin-right: auto;
@@ -114,7 +114,7 @@ div.priceratediv > * {
   font-weight: 400;
   font-style: normal;
   position: absolute;
-  width: 10%;
+  width: 13%;
   top: 7%;
   right: 0;
   border-radius: 1.5vh 0 0 1.5vh;
@@ -128,7 +128,7 @@ div.priceratediv > * {
   font-style: normal;
   margin-left: 0;
   position: absolute;
-  width: 10%;
+  width: 13%;
   top: 7%;
   right: 0;
   border-radius: 1.5vh 0 0 1.5vh;
@@ -144,6 +144,8 @@ div.priceratediv > * {
     grid-template-rows: 1fr 0.7fr;
     grid-template-columns: 1fr 1fr;
     gap: 1%;
+    margin: 10% 5%;
+    box-shadow: 0px 1px 10px #1e1e1e;
   }
   div.productcontainer:hover {
     transform: scale(101%);
@@ -193,7 +195,10 @@ div.priceratediv > * {
   }
   h1#priceHeader.ruda {
     margin-top: 25%;
+    margin-bottom: 0%;
+    margin-right: 10%;
   }
+
   .priceratediv {
     height: 150%;
   }
